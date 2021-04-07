@@ -110,20 +110,21 @@ int main(int argc, char **argv) {
     obj_det_params.image_sync = true;
     obj_det_params.enable_tracking = true;
     obj_det_params.detection_model =  sl::DETECTION_MODEL::MULTI_CLASS_BOX;
+
     zed_error = p_zed->enableObjectDetection(obj_det_params);
+
     if (zed_error != ERROR_CODE::SUCCESS) {
         std::cout << sl::toVerbose(zed_error) << "\nExit program." << std::endl;
         p_zed->close();
         return 1;
     }
-
     // Object Detection runtime parameters : detect person only
     // see  the ZED Doc for the other available classes https://www.stereolabs.com/docs/api/group__Object__group.html#ga13b0c230bc8fee5bbaaaa57a45fa1177 
     ObjectDetectionRuntimeParameters objectTracker_parameters_rt;
     objectTracker_parameters_rt.detection_confidence_threshold = 50;
     objectTracker_parameters_rt.object_class_filter.clear();
     objectTracker_parameters_rt.object_class_filter.push_back(sl::OBJECT_CLASS::PERSON);
-     
+
 
     // Runtime parameters
     sl::RuntimeParameters rt_param;
@@ -154,7 +155,6 @@ int main(int argc, char **argv) {
 
     /****************************/
 
-
     // Main loop
     int counter_no_detection = 0;
     sl::Objects objects;
@@ -171,6 +171,7 @@ int main(int argc, char **argv) {
     while (true) {
         // Grab a new frame from the ZED
         status_zed = p_zed->grab(rt_param);
+
         if (status_zed != ERROR_CODE::SUCCESS) break;
         
         p_zed->retrieveObjects(objects, objectTracker_parameters_rt);

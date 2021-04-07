@@ -6,6 +6,7 @@ This tutorial shows how to deploy an application that starts a ZED camera and an
 You will deploy this tutorial on one of the devices installed on your CMP workspace. The CMP supports Jetson Nano, TX2 and Xavier or any computer. If you are using a Jetson, make sure it has been flashed. If you haven't done it already, [flash your Jetson](https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html).
 
 To be able to run this tutorial:
+
 - [Sign In the CMP and created a workspace](https://www.stereolabs.com/docs/cloud/overview/get-started/).
 - [Add and Setup a device](https://www.stereolabs.com/docs/cloud/overview/get-started/#add-a-camera).
 - A ZED must be plugged to this device.
@@ -43,6 +44,7 @@ Please refer to the main README of this repository if you want more information 
 
 ## What you should see after deployment
 This app have two direct consequences in the CMP interface:
+
 - A live stream should be visible
 - The available recording should be listed
 

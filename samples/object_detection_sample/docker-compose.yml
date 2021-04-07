@@ -8,7 +8,7 @@ services:
         context : ./app
         dockerfile : Dockerfile
         args :
-            BASE_IMAGE: stereolabs/iot:0.22.0-runtime-jetson-jp4.4
+            BASE_IMAGE: stereolabs/iot:0.30.35-runtime-jetson-jp4.4
     runtime: nvidia
     privileged: true
     network_mode: "host"

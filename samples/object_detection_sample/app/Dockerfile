@@ -15,4 +15,5 @@ apt-get install -y --no-install-recommends libopencv-dev && \
 
 #Copy your binary
 COPY app_executable /
+# CMD ["valgrind", "/app_executable"]
 CMD ["/app_executable"]

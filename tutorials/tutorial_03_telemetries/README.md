@@ -1,4 +1,5 @@
 # Tutorial 3 - Telemetries
+
 This tutorial shows you how to send telemetry to the cloud. This sample app opens a ZED and enable ZED tracking, meaning that you can access the camera position at each frame. Then the application gets the camera position and sends it to the cloud at each frame. Therefore the Telemetry panel will contain all the concecutive position of your camera.  
 
 
@@ -6,6 +7,7 @@ This tutorial shows you how to send telemetry to the cloud. This sample app open
 You will deploy this tutorial on one of the devices installed on your CMP workspace. The CMP supports Jetson Nano, TX2 and Xavier or any computer. If you are using a Jetson, make sure it has been flashed. If you haven't done it already, [flash your Jetson](https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html).
 
 To be able to run this tutorial:
+
 - [Sign In the CMP and created a workspace](https://www.stereolabs.com/docs/cloud/overview/get-started/).
 - [Add and Setup a device](https://www.stereolabs.com/docs/cloud/overview/get-started/#add-a-camera).
 - A ZED must be plugged to this device.
@@ -44,13 +46,9 @@ Please refer to the main README of this repository if you want more information 
 
 ## What you should see after deployment
 This app have two direct consequences in the CMP interface:
+
 - A live stream should be visible
 - The published telemetry should be accessible
-
-
-#### Tutorials overview
-This README only focus on the source code explaination and the way to deploy the app without giving technical explaination about the app deployment. 
-Please refer to the main README of this repository if you want more information about the CMP apps structure and technical precisions. 
 
 ### Live video
 Wait at least until your app is **running**. 

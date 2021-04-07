@@ -6,7 +6,7 @@ FROM ${BASE_IMAGE} AS builder
 #Install build dependencies
 RUN apt-get update -y && \
 DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata libx11-dev  && \
-apt-get install -y --no-install-recommends libopencv-dev && \
+apt-get install -y --no-install-recommends libopencv-dev &&  \
      rm -rf /var/lib/apt/lists/* && apt autoremove && apt clean
 
 # Compilation
